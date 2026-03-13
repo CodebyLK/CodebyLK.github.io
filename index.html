@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Lena Kemp Portfolio</title>
+    <meta name="name" content="Lena Kemp's Portfolio"> 
+    <link rel="icon" type="image/png" href="icons/Portfolio Favicon Project 4.png">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">&lt;Lena/&gt;</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section-->
+    <div id="home" class="hero">
+        <header>
+            <h1>Lena Kemp</h1>
+            <p>Full-Stack Developer | Tech Enthusiast | Problem Solver</p>
+        </header>
+    </div>
+
+    <!-- svg waves -->
+    <section id="body-svg" class="svg-container">
+        <!-- About Section -->
+    <div id="about" class="about-container">
+    <section class="about">
+        <section id="about-image" class="about-image-container">
+            <h2>About Me</h2>
+            <img class="about-image" src="images/logo.png" alt="Lena Kemp">
+
+
+        </section>
+        <p>A detail-oriented former corporate chemist with 8+ years of data analysis experience, now leveraging software development, Python, and SQL skills to build efficient, data-driven applications. In my free time I enjoy watching movies, listening to music and traveling. </p>
+    </section>
+    </div>
+
+        <!-- Skills Section -->
+    <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div id="skills-items1" class="skills-item-container">
+        <div class="skill-item"><img class="framework-icons" src="icons/JavaScript (1).svg" alt="JavaScript">JavaScript</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/python.svg" alt="Python">Python (Django, Flask)</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/html.svg" alt="HTML">HTML & CSS</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/SQL.svg" alt="Database">SQL & NoSQL Databases</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/github-white.svg" alt="Git">Version Control (Git/GitHub)</div>
+    </div>
+    <div id="skills-items2" class="skills-item-container">
+        <div class="skill-item"><img class="framework-icons" src="icons/Java-background.svg" alt="Java">Java</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/Pandas-background.svg" alt="Pandas">Pandas, NumPy</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/Spring.svg" alt="Spring">Spring Boot</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/FSharp.svg" alt="F#">F#</div>
+        <div class="skill-item"><img class="framework-icons" src="icons/Node.js.svg" alt="React.js">React.js, Node.js</div>
+    </div>
+    </section>
+        <!-- Project Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card-container">
+            <div id="project-card1" class="project-item">
+                <h3>Task Manager</h3>
+                <div id="project-image1" class="project-image-container">
+                    <img class="project-image" src="images/TaskManager.svg" alt="Task Manager">
+                </div>
+                <p>A chore manager app that has gaming elements and lets users connect and share stats with other users.</p>
+            </div>
+            <div id="project-card2" class="project-item">
+                <h3>Spring Boot Store</h3>
+                <div id="project-image2" class="project-image-container">
+                    <img class="project-image" src="images/SpringBootProject.svg" alt="Spring Boot Project">
+                </div>
+                <p>A Spring Boot developed storefront/database that allows users to add and remove elements.</p>
+            </div>
+            <div id="project-card3" class="project-item">
+                <h3>Flask Task Manager</h3>
+                <div id="project-image3" class="project-image-container">
+                <img class="project-image" src="images/Flask Task Manager.svg" alt="Flask Task Manager">
+                </div>
+                <p>A Task Manager application built with Flask. The application allows users to create, view, and manage tasks. Each task includes a title and a creation date in UTC Time.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Education Section -->
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-container">         
+            <div class="edu-card primary-card">
+            <h3 class="edu-title">B.S. Computer Science</h3>
+            <p class="edu-school">Farmingdale State College • Expected 2026</p>
+            <p class="edu-description">Focus on backend architecture, database management, and low-level systems programming.</p>
+            
+            <div class="course-list">
+                <span class="course-badge">Data Structures & Algorithms</span>
+                <span class="course-badge">Computer Architecture</span>
+                <span class="course-badge">Operating Systems</span>
+                <span class="course-badge">Database Management</span>
+            </div>
+            </div>
+
+            <div class="edu-card secondary-card">
+            <h3 class="edu-title">B.S. Chemistry</h3>
+            <p class="edu-school">Stevenson University • Graduated 2010</p>
+            <p class="edu-description">Developed rigorous analytical problem-solving skills, quantitative data analysis, and experience with complex scientific methodologies.</p>
+            </div>
+        </div>
+    </section>    
+
+    <!-- Footer -->
+    <footer>
+        <!-- Contact -->
+            <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <ul>
+            <li><img class="contact-icons" src="icons/email.png" alt="Email"> Email: <a href="mailto:CodebyLK@gmail.com">CodebyLK@gmail.com</a></li>
+            <li><img class="contact-icons" src="icons/git.svg" alt="GitHub"> GitHub: <a href="https://github.com/CodebyLK" target="_blank" rel="noopener">CodeByLK</a></li>
+        </ul>
+    </section>
+        <!-- Copyright -->
+        <p>&copy; 2026 Lena Kemp. All rights reserved.</p>
+    </footer>
+    </section>
+    
+</body>
+</html>
