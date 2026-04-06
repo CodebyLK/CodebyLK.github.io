@@ -70,8 +70,27 @@ filterButtons.forEach(button => {
     });
 });
 
-window.onbeforeunload = () => {
-    for(const form of document.getElementsByTagName('form')) {
-        form.reset();
+document.getElementById("contact-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+        const response = await fetch("https://script.google.com/macros/s/AKfycbzNhovcOi9ZrB8QzBsqnaywrJJdMeNBE0T1caJPTyKFtSG_QJR0zp_joC1ZOFOk0LUAAQ/exec", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            document.getElementById("status").textContent = "Message sent!";
+            form.reset();
+        } else {
+            document.getElementById("status").textContent = "Error sending message.";
+        }
+    } catch (err) {
+        document.getElementById("status").textContent = "Network error.";
     }
-}
+});
+
