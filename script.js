@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (targetElement) {
                 const headerOffset = 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
                 window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
             }
         });
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             try {
                 // We use text/plain to avoid CORS preflight issues with Google Scripts
-                const response = await fetch("https://script.google.com/macros/s/AKfycbzNhovcOi9ZrB8QzBsqnaywrJJdMeNBE0T1caJPTyKFtSG_QJR0zp_joC1ZOFOk0LUAAQ/exec", {
+                await fetch("https://script.google.com/macros/s/AKfycbzNhovcOi9ZrB8QzBsqnaywrJJdMeNBE0T1caJPTyKFtSG_QJR0zp_joC1ZOFOk0LUAAQ/exec", {
                     method: "POST",
                     mode: "no-cors", // This is key for Google Apps Script
                     cache: "no-cache",
