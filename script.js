@@ -78,27 +78,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const contactForm = document.getElementById("contact-form");
 
     if (contactForm) {
+        // Inside your contactForm listener:
         contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
+            const statusMsg = document.getElementById("status");
+            statusMsg.textContent = "Sending...";
+
             const form = e.target;
-            const data = Object.fromEntries(new FormData(form).entries());
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
 
             try {
+                // We use text/plain to avoid CORS preflight issues with Google Scripts
                 const response = await fetch("https://script.google.com/macros/s/AKfycbzNhovcOi9ZrB8QzBsqnaywrJJdMeNBE0T1caJPTyKFtSG_QJR0zp_joC1ZOFOk0LUAAQ/exec", {
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
+                    mode: "no-cors", // This is key for Google Apps Script
+                    cache: "no-cache",
                     body: JSON.stringify(data)
                 });
 
-                if (response.ok) {
-                    document.getElementById("status").textContent = "Message sent!";
-                    form.reset();
-                } else {
-                    document.getElementById("status").textContent = "Error sending message.";
-                }
+                // Note: with "no-cors", response.ok will be false and status will be 0
+                // even if it works. This is an intentional browser security feature.
+                statusMsg.textContent = "Message sent!";
+                form.reset();
+
             } catch (err) {
-                document.getElementById("status").textContent = "Network error.";
+                console.error(err);
+                statusMsg.textContent = "Network error. Please try again.";
             }
         });
     }
