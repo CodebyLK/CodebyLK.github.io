@@ -1,10 +1,9 @@
-
 # 👩🏾‍💻 Lena Kemp | Developer Portfolio
 
 ### **Overview**
-A responsive, custom-built personal portfolio website designed to showcase my projects in full-stack development, data engineering, and software architecture. 
+A responsive, custom-built personal portfolio website designed to showcase my projects across full-stack development, data engineering, and AI-assisted workflows.
 
-The site features a modern, dark-mode aesthetic with "glassmorphism" UI elements, built entirely from scratch without the use of heavy CSS frameworks like Bootstrap or Tailwind.
+The site features a modern, dark-mode aesthetic with custom UI elements, built entirely from scratch without the use of heavy CSS frameworks like Bootstrap or Tailwind, emphasizing a clean, "engineering-first" design philosophy.
 
 🔗 **[View Live Portfolio](https://codebylk.github.io)**
 
@@ -14,7 +13,7 @@ The site features a modern, dark-mode aesthetic with "glassmorphism" UI elements
 * **Custom UI Architecture:** Built with pure CSS3 (Flexbox & CSS Grid) focusing on a clean, scalable, and responsive layout across all device sizes.
 * **Dynamic Interactivity:** Vanilla JavaScript integration for smooth scrolling, active-section navbar tracking, and dynamic skill filtering with staggered CSS animations.
 * **Performance Optimized:** Lightweight asset management and DOM manipulation ensure fast load times and a seamless user experience.
-* **Thematic Design:** Integrates analytical and chemistry-themed subtle touches (like the custom 404 "reaction failed" page) to reflect my professional background.
+* **Thematic Design:** Integrates analytical and chemistry-themed subtle touches (like the custom 404 "reaction failed" page) to reflect my 8-year professional background in corporate lab environments.
 
 ---
 
@@ -41,4 +40,3 @@ To view or modify this project locally:
 ## 📫 Contact & Links
 
 * **GitHub:** [Lena Kemp](https://github.com/CodebyLK)
-

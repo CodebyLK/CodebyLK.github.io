@@ -8,159 +8,161 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <title>Lena Kemp | Full-Stack Developer</title>
+    <title>Lena Kemp | Software Engineer</title>
     <link rel="icon" type="image/png" href="icons/Portfolio Favicon Project 4.png">
 </head>
 
 <body>
-    <nav>
-        <div class="logo"><p>&lt;Lena/&gt;</p></div>
-        <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
-        <div class="nav-links" id="nav-menu">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-
-    <header id="home" class="hero">
-        <h1>Lena Kemp</h1>
-        <div class="hero-text-box">
-            <p>Full-Stack Developer | B.S. CS Candidate | Former Corporate Chemist</p>
-        </div>
-    </header>
-
-    <div class="svg-container">
-        <section id="about" class="about-container">
-            <div class="about">
-                <div class="about-header">
-                    <h2>The Catalyst</h2>
-                    <img id="about-image" class="about-image rounded-logo" src="images/logo.png" alt="Lena Kemp profile">
-                </div>
-                <p>
-                    I am a <span class="highlight">Full-Stack Developer</span> and 
-                    <span class="highlight">B.S. Computer Science Candidate</span> leveraging an 8-year 
-                    pharmaceutical chemistry background to build high-integrity software solutions. 
-                    I specialize in bridging the gap between <span class="highlight">laboratory-grade analytical rigor</span> 
-                    and modern development, focusing on robust data systems for organizations that prioritize reliability.
-                </p>
-
-                <p>
-                    Much like a chemical reaction requires the right catalyst, I believe great software 
-                    requires a balance of logic, <span class="highlight">precision</span>, and disciplined 
-                    problem-solving. My experience in zero-error analytical environments translates into 
-                    a systematic approach to <span class="highlight">Backend Architecture</span>, 
-                    <span class="highlight">Python Automation</span>, and <span class="highlight">SQL Optimization</span>.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills" class="skills">
-            <h2>Technical Elements</h2>
-            <div class="skills-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="lang">Languages</button>
-                <button class="filter-btn" data-filter="framework">Frameworks</button>
-                <button class="filter-btn" data-filter="data">Data</button>
-                <button class="filter-btn" data-filter="method">Methodology</button>
-            </div>
-            <div class="skills-item-container">
-                <div class="skill-item" data-category="lang" data-symbol="Js"><img class="framework-icons" src="icons/JavaScript (1).svg" alt="JavaScript Skill Item">JavaScript</div>
-                <div class="skill-item" data-category="lang" data-symbol="Py"><img class="framework-icons" src="icons/python.svg" alt="Python Skill Item">Python</div>
-                <div class="skill-item" data-category="framework" data-symbol="Hc"><img class="framework-icons" src="icons/html.svg" alt="HTML/CSS Skill Item">HTML & CSS</div>
-                <div class="skill-item" data-category="data" data-symbol="Sq"><img class="framework-icons" src="icons/SQL.svg" alt="">SQL</div>
-                <div class="skill-item" data-category="framework" data-symbol="Gt"><img class="framework-icons" src="icons/github-white.svg" alt="GitHub Skill Item">GitHub</div>
-                <div class="skill-item" data-category="lang" data-symbol="Jv"><img class="framework-icons" src="icons/Java-background.svg" alt="Java Skill Item">Java</div>
-                <div class="skill-item" data-category="data" data-symbol="Pn"><img class="framework-icons" src="icons/Pandas-background.svg" alt="Pandas Skill Item">Pandas</div>
-                <div class="skill-item" data-category="framework" data-symbol="Sb"><img class="framework-icons" src="icons/Spring.svg" alt="Spring Boot Skill Item">Spring Boot</div>
-                <div class="skill-item" data-category="lang" data-symbol="Fs"><img class="framework-icons" src="icons/FSharp.svg" alt="F# Skill Item">F#</div>
-                <div class="skill-item" data-category="framework" data-symbol="Nj"><img class="framework-icons" src="icons/Node.js.svg" alt="NodeJS Skill Item">Node.js</div>
-                
-                <div class="skill-item" data-category="method" data-symbol="Ag"><p>Agile</p></div>
-                <div class="skill-item" data-category="method" data-symbol="Sl"><p>SDLC</p></div>
-                <div class="skill-item" data-category="method" data-symbol="Ut"><p>Testing</p></div>
-                <div class="skill-item" data-category="method" data-symbol="Ls"><p>Six Sigma</p></div>
-                <div class="skill-item" data-category="method" data-symbol="Di"><p>Data Integrity</p></div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <div class="project-card-container">
-
-                <div class="project-item">
-                    <div class="project-image-container"><img src="images/WNBAProject.svg" alt="NY Liberty Analytics"></div>
-                    <h3>Liberty Analytics</h3>
-                    <p>An end-to-end data engineering pipeline built with Python and SQL Server. Features a custom NLP engine to correlate official WNBA player statistics with unstructured social media sentiment.</p>
-                    <a href="https://github.com/CodebyLK/Liberty-Analytics-Pipeline" target="_blank" class="project-btn">View on GitHub</a>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-image-container"><img src="images/WNBAStats.svg" alt="WNBA Scout Dashboard"></div>
-                    <h3>WNBA Scout Dashboard</h3>
-                    <p>A full-stack analytics dashboard built with React, Flask, and SQL Server. Features a custom glassmorphism Bento Grid UI, dynamic head-to-head player comparisons, and real-time efficiency calculations.</p>
-                    <a href="https://github.com/CodebyLK/WNBA-Stats-Dashboard" target="_blank" class="project-btn">View on GitHub</a>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-image-container"><img src="images/Flask Task Manager.svg" alt="TaskFlow Desktop App"></div>
-                    <h3>TaskFlow Desktop</h3>
-                    <p>A standalone Python desktop application built with FlaskWebGUI and SQLite. Features a custom dark-mode UI and Flatpickr integration for precision deadline tracking.</p>
-                    <a href="https://github.com/CodebyLK/TaskManager" target="_blank" class="project-btn">View on GitHub</a>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="education" class="education">
-            <h2>Education</h2>
-            <div class="education-container">         
-                <div class="edu-card">
-                    <h3 class="edu-title">B.S. Computer Science</h3>
-                    <p>Farmingdale State College • Expected 2026</p>
-                    <div class="course-list"><span class="course-badge">Algorithms</span><span class="course-badge">Databases</span></div>
-                </div>
-                <div class="edu-card">
-                    <h3 class="edu-title">B.S. Chemistry</h3>
-                    <p>Stevenson University • 2010</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Request a Connection</h2>
-            <p class="contact-subtext">Reach out to discuss how my analytical background can benefit your team.</p>
-                <form id="contact-form" class="contact-form">
-
-                    <div style="display:none;">
-                        <label>Spam Check (Leave Blank)</label>
-                        <input type="text" name="honeypot" value="">
-                    </div>
-
-                    <label for="name">Name</label>
-                    <input id="name" type="text" name="name" placeholder="Name" required>
-
-                    <label for="email">Email</label>
-                    <input id="email" type="email" name="email" placeholder="Email" required>
-
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="How can I help you?" rows="5" required></textarea>
-
-                    <button type="submit" class="submit-btn">Send Request</button>
-                </form>
-                <p id="status"></p>
-        </section>
+<nav>
+    <div class="logo"><p>&lt;Lena/&gt;</p></div>
+    <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <div class="nav-links" id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
 
-    <footer>
-        <p>&copy; 2026 Lena Kemp. All rights reserved.</p>
-    </footer>
+<header id="home" class="hero">
+    <h1>Lena Kemp</h1>
+    <div class="hero-text-box">
+        <p>Software Engineer | Data & Full-Stack | Former Corporate Chemist</p>
+    </div>
+</header>
+
+<div class="svg-container">
+    <section id="about" class="about-container">
+        <div class="about">
+            <div class="about-header">
+                <h2>The Catalyst</h2>
+                <img id="about-image" class="about-image rounded-logo" src="images/logo.png" alt="Lena Kemp profile">
+            </div>
+            <p>
+                I am a <span class="highlight">Software Engineer</span> and
+                <span class="highlight">B.S. Computer Science Candidate</span> who builds robust data systems and full-stack web applications. Before transitioning to tech, I spent 8 years working in high-stakes, FDA-regulated pharmaceutical laboratories, ensuring absolute data integrity.
+            </p>
+
+            <p>
+                Today, I bring that <span class="highlight">"zero-error" compliance mindset</span> to software development. I specialize in bridging backend architecture (Python, SQL, Node.js) with modern frontends (React), utilizing agile methodologies and modern developer tools to deliver highly scalable, production-ready code.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Technical Elements</h2>
+        <div class="skills-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="lang">Languages</button>
+            <button class="filter-btn" data-filter="framework">Frameworks</button>
+            <button class="filter-btn" data-filter="data">Data</button>
+            <button class="filter-btn" data-filter="method">Methodology</button>
+        </div>
+        <div class="skills-item-container">
+            <div class="skill-item" data-category="lang" data-symbol="Js"><img class="framework-icons" src="icons/JavaScript (1).svg" alt="JavaScript Skill Item">JavaScript</div>
+            <div class="skill-item" data-category="lang" data-symbol="Py"><img class="framework-icons" src="icons/python.svg" alt="Python Skill Item">Python</div>
+            <div class="skill-item" data-category="framework" data-symbol="Hc"><img class="framework-icons" src="icons/html.svg" alt="HTML/CSS Skill Item">HTML & CSS</div>
+            <div class="skill-item" data-category="data" data-symbol="Sq"><img class="framework-icons" src="icons/SQL.svg" alt="">SQL</div>
+            <div class="skill-item" data-category="framework" data-symbol="Gt"><img class="framework-icons" src="icons/github-white.svg" alt="GitHub Skill Item">GitHub</div>
+            <div class="skill-item" data-category="lang" data-symbol="Jv"><img class="framework-icons" src="icons/Java-background.svg" alt="Java Skill Item">Java</div>
+            <div class="skill-item" data-category="data" data-symbol="Pn"><img class="framework-icons" src="icons/Pandas-background.svg" alt="Pandas Skill Item">Pandas</div>
+            <div class="skill-item" data-category="framework" data-symbol="Sb"><img class="framework-icons" src="icons/Spring.svg" alt="Spring Boot Skill Item">Spring Boot</div>
+            <div class="skill-item" data-category="lang" data-symbol="Fs"><img class="framework-icons" src="icons/FSharp.svg" alt="F# Skill Item">F#</div>
+            <div class="skill-item" data-category="framework" data-symbol="Nj"><img class="framework-icons" src="icons/Node.js.svg" alt="NodeJS Skill Item">Node.js</div>
+
+            <div class="skill-item" data-category="method" data-symbol="Ag"><p>Agile</p></div>
+            <div class="skill-item" data-category="method" data-symbol="Sl"><p>SDLC</p></div>
+            <div class="skill-item" data-category="method" data-symbol="Ut"><p>Testing</p></div>
+            <div class="skill-item" data-category="method" data-symbol="Ls"><p>Six Sigma</p></div>
+            <div class="skill-item" data-category="method" data-symbol="Di"><p>Data Integrity</p></div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-card-container">
+
+            <div class="project-item">
+                <div class="project-image-container"><img src="images/WNBAProject.svg" alt="WNBA Analytics Platform"></div>
+                <h3>WNBA Full-Stack Analytics</h3>
+                <p>An end-to-end data ecosystem bypassing external APIs to deliver historical metrics. Architected a custom ELT pipeline and scalable Star Schema using Python and SQL Server, served via a dynamic React and D3.js frontend.</p>
+                <a href="https://github.com/CodebyLK/WNBA-Stats-Dashboard" target="_blank" class="project-btn">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image-container"><img src="images/Mixology.svg" alt="Molecular Mixology App"></div>
+                <h3>Molecular Mixology</h3>
+                <p>A full-stack web application bridging classic mixology and organic chemistry. Built with Node.js, Express, and LLM API integrations. Engineered a dynamic data extraction mechanism to safely parse unpredictable data streams into secure database keys.</p>
+                <a href="https://github.com/CodebyLK/molecular-mixology" target="_blank" class="project-btn">View on GitHub</a>
+            </div>
+
+            <div class="project-item">
+                <div class="project-image-container"><img src="images/ChemAnalyzer.svg" alt="ChemAnalyzer Desktop App"></div>
+                <h3>ChemAnalyzer</h3>
+                <p>A high-performance Python desktop application bridging empirical formulas with 3D structural analysis. Engineered a custom recursive descent parser and a stoichiometric balancing engine using NumPy and Singular Value Decomposition (SVD).</p>
+                <a href="https://github.com/CodebyLK/ChemAnalyzer" target="_blank" class="project-btn">View on GitHub</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>Professional Experience</h2>
+        <div class="experience-container">
+            <div class="exp-card">
+                <h3 class="exp-title">QC Analyst Specialist</h3>
+                <p>Sandoz • 2022 – 2024</p>
+                <div class="course-list"><span class="course-badge">Data Governance</span><span class="course-badge">QbD</span></div>
+            </div>
+            <div class="exp-card">
+                <h3 class="exp-title">Chemist III</h3>
+                <p>Cipla Ltd. • 2020 – 2022</p>
+                <div class="course-list"><span class="course-badge">FDA Compliance</span><span class="course-badge">Federal Audits</span></div>
+            </div>
+            <div class="exp-card">
+                <h3 class="exp-title">Scientist II</h3>
+                <p>Amneal Pharmaceuticals • 2015 – 2020</p>
+                <div class="course-list"><span class="course-badge">Zero-Error QA</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-container">
+            <div class="edu-card">
+                <h3 class="edu-title">B.S. Computer Science</h3>
+                <p>Farmingdale State College • Expected 2026</p>
+                <div class="course-list"><span class="course-badge">Algorithms</span><span class="course-badge">Databases</span></div>
+            </div>
+            <div class="edu-card">
+                <h3 class="edu-title">B.S. Chemistry</h3>
+                <p>Stevenson University • 2010</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Request a Connection</h2>
+        <p class="contact-subtext">Reach out to discuss how my analytical background can benefit your team. <strong>Detailed resume and professional references available upon request.</strong></p>
+        <form action="https://formspree.io/f/your_id" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
+            <button type="submit" class="submit-btn">Send Request</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2026 Lena Kemp. All rights reserved.</p>
+</footer>
 </body>
 </html>
