@@ -74,16 +74,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 5. Contact Form Submission
+    // 5. Contact Form Submission (Option A: Using the HTML status element)
     const contactForm = document.getElementById("contact-form");
 
     if (contactForm) {
-        // Inside your contactForm listener:
         contactForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
             const statusMsg = document.getElementById("status");
-            statusMsg.textContent = "Sending...";
+            const submitBtn = contactForm.querySelector(".submit-btn");
+
+            // Safeguard check to prevent console errors if the HTML element disappears
+            if (statusMsg) {
+                statusMsg.textContent = "Sending...";
+                statusMsg.style.color = "#65AFFF"; // Matches your monochromatic blue highlight
+            }
+
+            if (submitBtn) {
+                submitBtn.disabled = true;
+            }
 
             const form = e.target;
             const formData = new FormData(form);
@@ -93,19 +102,33 @@ document.addEventListener("DOMContentLoaded", () => {
                 // We use text/plain to avoid CORS preflight issues with Google Scripts
                 await fetch("https://script.google.com/macros/s/AKfycbzNhovcOi9ZrB8QzBsqnaywrJJdMeNBE0T1caJPTyKFtSG_QJR0zp_joC1ZOFOk0LUAAQ/exec", {
                     method: "POST",
-                    mode: "no-cors", // This is key for Google Apps Script
+                    mode: "no-cors",
                     cache: "no-cache",
                     body: JSON.stringify(data)
                 });
 
-                // Note: with "no-cors", response.ok will be false and status will be 0
-                // even if it works. This is an intentional browser security feature.
-                statusMsg.textContent = "Message sent!";
+                if (statusMsg) {
+                    statusMsg.textContent = "Message sent!";
+                    statusMsg.style.color = "#5899E2"; // Subtle green-blue success hue
+                }
+
                 form.reset();
+
+                // Re-enable button and clear status text after 4 seconds
+                setTimeout(() => {
+                    if (submitBtn) submitBtn.disabled = false;
+                    if (statusMsg) statusMsg.textContent = "";
+                }, 4000);
 
             } catch (err) {
                 console.error(err);
-                statusMsg.textContent = "Network error. Please try again.";
+                if (statusMsg) {
+                    statusMsg.textContent = "Network error. Please try again.";
+                    statusMsg.style.color = "#ff6b6b"; // Red warning alert state
+                }
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                }
             }
         });
     }
