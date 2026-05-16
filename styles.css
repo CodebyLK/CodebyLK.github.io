@@ -182,7 +182,71 @@ nav {
 .contact { padding: 6rem 5%; display: flex; flex-direction: column; align-items: center; }
 .contact-subtext { text-align: center; max-width: 600px; margin-bottom: 2rem; }
 .contact-form { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; max-width: 550px; }
-.contact-form input, .contact-form textarea { padding: 1.1rem; background: #274060; border: 1px solid rgba(255,255,255,0.1); border-radius: 6px; color: white; font-family: 'Quicksand', sans-serif; }
+
+/* Style the visible form text label for the select menu cleanly */
+.form-label {
+    align-self: flex-start;
+    font-weight: 700;
+    color: #65AFFF;
+    margin-bottom: -0.4rem;
+    font-size: 0.95rem;
+}
+
+/* Accessible hidden helper class for Name/Email tags to pass validation without altering layouts */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Unified input sizing rules to guarantee matching layout widths */
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 1.1rem;
+    background: #274060;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus states for uniform highlighting interactive cues */
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    border-color: #5899E2;
+    box-shadow: 0 0 10px rgba(88, 153, 226, 0.2);
+}
+
+/* Stripping default native dropdown stylings */
+.contact-form select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1.1rem center;
+    background-size: 1.2rem;
+    padding-right: 3rem;
+}
+
+.contact-form select option {
+    background-color: #1B2845;
+    color: white;
+}
+
 .submit-btn { background: #5899E2; color: #1B2845; padding: 1.1rem; border: none; font-weight: bold; cursor: pointer; border-radius: 6px; transition: 0.3s; }
 .submit-btn:hover { background: #F6FAFD; box-shadow: 0 0 15px #F6FAFD; }
 

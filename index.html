@@ -34,7 +34,7 @@
 <header id="home" class="hero">
     <h1>Lena Kemp</h1>
     <div class="hero-text-box">
-        <p>Software Engineer | Data & Full-Stack | Former Corporate Chemist</p>
+        <p>Software Engineer | Data & Full-Stack | Former Chemist</p>
     </div>
 </header>
 
@@ -46,8 +46,8 @@
                 <img id="about-image" class="about-image rounded-logo" src="images/logo.png" alt="Lena Kemp profile">
             </div>
             <p>
-                I am a <span class="highlight">Software Engineer</span> and
-                <span class="highlight">B.S. Computer Science Candidate</span> who builds robust data systems and full-stack web applications. Before transitioning to tech, I spent 8 years working in high-stakes, FDA-regulated pharmaceutical laboratories, ensuring absolute data integrity.
+                I'm a <span class="highlight">Software Engineer</span> with a
+                <span class="highlight">B.S. in Computer Science</span> who builds reliable data systems and full-stack web applications. Before transitioning to tech, I spent 8 years working in high-stakes, FDA-regulated pharmaceutical laboratories, ensuring absolute data integrity.
             </p>
 
             <p>
@@ -80,7 +80,7 @@
             <div class="skill-item" data-category="method" data-symbol="Ag"><p>Agile</p></div>
             <div class="skill-item" data-category="method" data-symbol="Sl"><p>SDLC</p></div>
             <div class="skill-item" data-category="method" data-symbol="Ut"><p>Testing</p></div>
-            <div class="skill-item" data-category="method" data-symbol="Ls"><p>Six Sigma</p></div>
+            <div class="skill-item" data-category="method" data-symbol="Ai"><p>AI Proficiency</p></div>
             <div class="skill-item" data-category="method" data-symbol="Di"><p>Data Integrity</p></div>
         </div>
     </section>
@@ -151,11 +151,32 @@
 
     <section id="contact" class="contact">
         <h2>Request a Connection</h2>
-        <p class="contact-subtext">Reach out to discuss how my analytical background can benefit your team. <strong>Detailed resume and professional references available upon request.</strong></p>
-        <form action="https://formspree.io/f/your_id" method="POST" class="contact-form">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <textarea name="message" placeholder="How can I help you?" rows="5" required></textarea>
+        <p class="contact-subtext">Reach out to discuss how my analytical background can benefit your team. <strong>Detailed resume available upon request.</strong></p>
+
+        <form id="contact-form" class="contact-form">
+            <div style="display:none;" aria-hidden="true">
+                <label for="honeypot-input">Spam Check</label>
+                <input type="text" id="honeypot-input" name="honeypot" value="">
+            </div>
+
+            <label for="name-input" class="sr-only">Name</label>
+            <input type="text" id="name-input" name="name" placeholder="Name" required minlength="2">
+
+            <label for="email-input" class="sr-only">Email</label>
+            <input type="email" id="email-input" name="email" placeholder="Email" required>
+
+            <label for="reason" class="form-label">In Regards To</label>
+            <select id="reason" name="reason" required>
+                <option value="" disabled selected>Select an option...</option>
+                <option value="Job Opportunity">Job Opportunity / Recruiting</option>
+                <option value="Networking">Networking</option>
+                <option value="Project Collaboration">Project Collaboration</option>
+                <option value="General Inquiry">General Inquiry</option>
+            </select>
+
+            <label for="message-input" class="sr-only">How can I help you?</label>
+            <textarea id="message-input" name="message" placeholder="How can I help you?" rows="5" required></textarea>
+
             <button type="submit" class="submit-btn">Send Request</button>
         </form>
     </section>
